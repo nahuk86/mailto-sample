@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Landing Page</title>
+</head>
+<body>
+
+<div style="text-align: center; margin-top: 100px;">
+    <h1>Welcome to our Landing Page!</h1>
+    <p>Redirecting to email client...</p>
+</div>
+
+<script>
+// Function to open email client with predefined email details
+function openEmailClient() {
+    // Change the email address, subject, and body as needed
+    var emailAddress = 'contact@example.com';
+    var subject = 'Inquiry from Landing Page';
+    var body = 'Hello,\n\nI am interested in your products/services. Please provide more information.\n\nRegards,';
+
+    // Construct the mailto URL
+    var mailtoLink = 'mailto:' + emailAddress + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    // Open the default email client
+    window.location.href = mailtoLink;
+}
+
+// Call openEmailClient function after page is fully loaded
+window.onload = function() {
+    openEmailClient();
+};
+</script>
+
+</body>
+</html>
